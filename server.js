@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -23,7 +23,7 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
-// const mongoose = require('mongoose')
+// 
 // mongoose.connect(process.env.DATABASE_URL, { 
 //   useNewUrlParser: true,
 //   useCreateIndex: true,
@@ -37,7 +37,7 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 // console.log("Database_URL 99999999999999999999999999999999999999999", process.env.DATABASE_URL);
 
 
-
+const mongoose = require('mongoose')
 const connectDB =  async ()=>{
 
     try{
